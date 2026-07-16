@@ -1,0 +1,140 @@
+.saved-locations-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.saved-locations-container h3 {
+  color: #333;
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.saved-locations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.saved-location-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.saved-location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.location-info {
+  margin-bottom: 15px;
+}
+
+.location-info h4 {
+  color: white;
+  font-size: 18px;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+}
+
+.location-info p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin: 0;
+}
+
+.location-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.location-actions .btn-small {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 13px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.location-actions .btn-small:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.location-actions .btn-danger {
+  background-color: rgba(220, 53, 69, 0.3);
+  border-color: rgba(220, 53, 69, 0.5);
+}
+
+.location-actions .btn-danger:hover {
+  background-color: rgba(220, 53, 69, 0.5);
+  border-color: rgba(220, 53, 69, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .saved-locations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .saved-locations-container {
+    padding: 20px;
+  }
+
+  .saved-locations-container h3 {
+    font-size: 20px;
+  }
+
+  .saved-locations-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .saved-location-card {
+    padding: 15px;
+  }
+
+  .location-info h4 {
+    font-size: 16px;
+  }
+
+  .location-info p {
+    font-size: 13px;
+  }
+
+  .location-actions .btn-small {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .saved-locations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .saved-location-card {
+    padding: 15px;
+  }
+
+  .location-actions {
+    gap: 8px;
+  }
+}
